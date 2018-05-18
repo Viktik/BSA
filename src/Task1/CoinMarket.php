@@ -10,7 +10,7 @@ class CoinMarket
     private $currencies= [];
     public function addCurrency(Currency $currency): void
     {
-        $this->currencies[$currency->getName()] = $currency;
+        $this->currencies[] = $currency;
     }
 
     public function maxPrice(): float
