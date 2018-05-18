@@ -2,18 +2,43 @@
 
 namespace Cryptocurrency\Task1;
 
-class Ethereum implements Currency{
+/**
+ * Class Ethereum
+ * @package Cryptocurrency\Task1
+ */
+class Ethereum implements Currency
+{
+    /**
+     * @var float
+     */
+    private $dailyPrice;
+
+    /**
+     * Ethereum constructor.
+     * @param float $dailyPrice
+     */
+    public function __construct(float $dailyPrice)
+    {
+
+        $this->dailyPrice = $dailyPrice;
+    }
+
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         return "Ethereum";
     }
+
+    /**
+     * @return float
+     */
     public function getDailyPrice(): float
     {
-        $json = file_get_contents('https://api.coinmarketcap.com/v1/ticker/ethereum/');
-        $obj = json_decode($json,true);
-        $btcRate = $obj[0]["price_usd"];
-        return $btcRate;
+        return $this->dailyPrice;
     }
+
     public function getLogoUrl(): string
     {
         return 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png';

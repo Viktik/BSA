@@ -5,6 +5,10 @@ namespace CryptocurrencyTests\Task2;
 use Cryptocurrency\Task2\EmojiGenerator;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class EmojiGeneratorTest
+ * @package CryptocurrencyTests\Task2
+ */
 class EmojiGeneratorTest extends TestCase
 {
     /**
@@ -23,6 +27,9 @@ class EmojiGeneratorTest extends TestCase
         $this->assertEquals($expected, iterator_to_array($generator));
     }
 
+    /**
+     * @return array
+     */
     public function emojiDataProvider()
     {
         return [
