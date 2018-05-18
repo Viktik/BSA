@@ -5,7 +5,7 @@ namespace Cryptocurrency\Task1;
 class Dogecoin implements Currency{
     public function getName(): string
     {
-        return __CLASS__;
+        return "Dogecoin";
     }
     public function getDailyPrice(): float
     {

@@ -5,7 +5,7 @@ namespace Cryptocurrency\Task1;
 class Ethereum implements Currency{
     public function getName(): string
     {
-        return __CLASS__;
+        return "Ethereum";
     }
     public function getDailyPrice(): float
     {
